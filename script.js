@@ -46,5 +46,17 @@ function typeFinal() {
     finalText.textContent += finalMessage.charAt(j);
     j++;
     setTimeout(typeFinal, 55);
+  } else {
+    // make last line bold after typing completes
+    makeLastLineBold();
   }
+}
+
+function makeLastLineBold() {
+  const lines = finalText.textContent.split("\n");
+  const lastLine = lines.pop();
+
+  finalText.innerHTML =
+    lines.join("<br>") +
+    "<br><br><strong>" + lastLine + "</strong>";
 }
