@@ -5,6 +5,38 @@
   font-family: "Poppins", system-ui, sans-serif;
 }
 
+/* INTRO STYLING */
+#intro h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+#typing {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+#intro h2 {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+#no {
+  background: #ddd;
+  transition: transform 0.2s ease;  /* 🔥 smooth movement */
+}
+
+#yes {
+  background: #ff4d6d;
+  color: white;
+  box-shadow: 0 6px 15px rgba(255, 77, 109, 0.4);
+}
+
+#yes:hover {
+  transform: scale(1.05);
+}
+
 body {
   height: 100vh;
   background: linear-gradient(135deg, #ffafbd, #ffc3a0);
