@@ -34,7 +34,8 @@ noBtn.addEventListener("mouseover", () => {
 /* YES click */
 yesBtn.addEventListener("click", () => {
   intro.style.display = "none";
-  final.classList.remove("hidden");
+final.classList.remove("hidden");
+final.classList.add("show");
   typeFinal();
 });
 
