@@ -2,7 +2,7 @@ const introText =
   "I wrote this in code because some feelings are easier to express this way... 💻❤️";
 
 const finalMessage =
-  "Mera dil haii tu meri jaan hai tu, meri duniya jahan hai tu.\n" +
+  "Mera dil hai tu meri jaan hai tu, meri duniya jahan hai tu.\n" +
   "Bas tu dikhti hai mujhe shaam savere, mere dil pe likha naam hai tu.\n\n" +
   "You just made me the happiest person 💍❤️";
 
