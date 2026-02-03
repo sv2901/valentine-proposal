@@ -53,11 +53,14 @@ button {
 
 /* FINAL SCREEN */
 #final {
+  min-height: 250px;
+  width: 100%;
+}
+
+#final.show {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 250px;
-  width: 100%;
 }
 
 #final-text {
