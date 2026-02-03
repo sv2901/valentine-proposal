@@ -1,69 +1,48 @@
-const text =
+const introText =
   "I wrote this in code because some feelings are easier to express this way... 💻❤️";
 
-const typingElement = document.getElementById("typing");
-const question = document.getElementById("question");
-const buttons = document.getElementById("buttons");
+const finalMessage =
+  "You just made me the happiest person 💍❤️";
+
+const typingEl = document.getElementById("typing");
+const intro = document.getElementById("intro");
+const finalScreen = document.getElementById("final-screen");
+const finalText = document.getElementById("final-text");
+
 const yesBtn = document.getElementById("yes");
 const noBtn = document.getElementById("no");
-const finalText = document.getElementById("final");
-const title = document.getElementById("title");
 
+let i = 0;
 
-let index = 0;
-
-// Typing effect
-function typeText() {
-  if (index < text.length) {
-    typingElement.textContent += text.charAt(index);
-    index++;
-    setTimeout(typeText, 60);
-  } else {
-    setTimeout(() => {
-      question.classList.remove("hidden");
-      buttons.classList.remove("hidden");
-    }, 500);
+// Intro typing
+function typeIntro() {
+  if (i < introText.length) {
+    typingEl.textContent += introText.charAt(i);
+    i++;
+    setTimeout(typeIntro, 50);
   }
 }
+typeIntro();
 
-typeText();
-
-// NO button escapes
+// NO button escape
 noBtn.addEventListener("mouseover", () => {
-  const x = Math.random() * 200 - 100;
-  const y = Math.random() * 100 - 50;
-  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  noBtn.style.transform =
+    `translate(${Math.random() * 100 - 50}px, ${Math.random() * 50 - 25}px)`;
 });
 
-// YES button action
+// YES click
 yesBtn.addEventListener("click", () => {
-  // hide everything else
-  title.classList.add("hidden");
-  typingElement.classList.add("hidden");
-  question.classList.add("hidden");
-  buttons.classList.add("hidden");
-
-  // show only final message
-  finalText.textContent =
-    "You just made me the happiest person 💍❤️";
-
-  finalText.classList.remove("hidden");
-  startHearts();
+  intro.classList.add("hidden");
+  finalScreen.classList.remove("hidden");
+  typeFinal();
 });
 
-
-// Hearts animation
-function startHearts() {
-  setInterval(() => {
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.textContent = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 15 + "px";
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-      heart.remove();
-    }, 6000);
-  }, 300);
+// Final typing
+let j = 0;
+function typeFinal() {
+  if (j < finalMessage.length) {
+    finalText.textContent += finalMessage.charAt(j);
+    j++;
+    setTimeout(typeFinal, 70);
+  }
 }
