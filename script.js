@@ -14,36 +14,36 @@ const finalText = document.getElementById("final-text");
 const yesBtn = document.getElementById("yes");
 const noBtn = document.getElementById("no");
 
-// Intro typing
+/* Intro typing */
 let i = 0;
 function typeIntro() {
   if (i < introText.length) {
     typingEl.textContent += introText.charAt(i);
     i++;
-    setTimeout(typeIntro, 50);
+    setTimeout(typeIntro, 45);
   }
 }
 typeIntro();
 
-// NO button escape
+/* NO button escape */
 noBtn.addEventListener("mouseover", () => {
   noBtn.style.transform =
     `translate(${Math.random() * 80 - 40}px, ${Math.random() * 40 - 20}px)`;
 });
 
-// YES click
+/* YES click */
 yesBtn.addEventListener("click", () => {
   intro.style.display = "none";
   final.classList.remove("hidden");
   typeFinal();
 });
 
-// Final typing
+/* Final typing */
 let j = 0;
 function typeFinal() {
   if (j < finalMessage.length) {
     finalText.textContent += finalMessage.charAt(j);
     j++;
-    setTimeout(typeFinal, 60);
+    setTimeout(typeFinal, 55);
   }
 }
