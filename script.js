@@ -2,7 +2,7 @@ const introText =
   "I wrote this in code because some feelings are easier to express this way... 💻❤️";
 
 const finalMessage =
-  "You just made me the happiest person 💍❤️";
+  "You just made me the happiest person 💍❤️ \n Mera dil haii tu meri jaan hai tu, meri duniya jahan hai tu. Bas tu dikhti hai mujhe shaam savere, mere dil pe likha naam hai tu.";
 
 const typingEl = document.getElementById("typing");
 const intro = document.getElementById("intro");
