@@ -26,6 +26,28 @@
   background: #ddd;
   transition: transform 0.2s ease;  /* 🔥 smooth movement */
 }
+#no {
+  background: #ddd;
+  position: relative;
+  transition: transform 0.15s ease-out;
+}
+
+.title {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.intro-text {
+  font-size: 1.05rem;
+  color: #555;
+  margin: 10px 0 30px;
+  min-height: 24px; /* prevents jump during typing */
+}
+
+.question {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
 
 #yes {
   background: #ff4d6d;
