@@ -77,12 +77,15 @@ button {
 }
 
 /* NO BUTTON — CURSOR-PROOF */
+/* NO BUTTON — smart escape */
 #no {
   background: #ddd;
   position: absolute;
-  pointer-events: none;        /* 🔥 cursor can NEVER land */
+  left: 55%;
+  top: 0;
   transition: transform 0.15s ease-out;
 }
+
 
 /* FINAL SCREEN */
 #final {
