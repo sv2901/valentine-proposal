@@ -26,10 +26,12 @@ function typeIntro() {
 typeIntro();
 
 /* NO button escape */
-noBtn.addEventListener("mouseover", () => {
-  noBtn.style.transform =
-    `translate(${Math.random() * 80 - 40}px, ${Math.random() * 40 - 20}px)`;
+noBtn.addEventListener("mouseenter", () => {
+  const x = Math.random() * 120 - 60;
+  const y = Math.random() * 60 - 30;
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
+;
 
 /* YES click */
 yesBtn.addEventListener("click", () => {
