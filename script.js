@@ -29,21 +29,17 @@ typeIntro();
 document.addEventListener("mousemove", (e) => {
   const rect = noBtn.getBoundingClientRect();
 
-  const btnCenterX = rect.left + rect.width / 2;
-  const btnCenterY = rect.top + rect.height / 2;
+  const dx = e.clientX - (rect.left + rect.width / 2);
+  const dy = e.clientY - (rect.top + rect.height / 2);
+  const distance = Math.sqrt(dx * dx + dy * dy);
 
-  const distanceX = e.clientX - btnCenterX;
-  const distanceY = e.clientY - btnCenterY;
-
-  const distance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
-
-  // if cursor comes close, escape
-  if (distance < 100) {
-    const moveX = Math.random() * 200 - 100;
-    const moveY = Math.random() * 120 - 60;
-    noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
+  if (distance < 120) {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 40 - 20;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
   }
 });
+
 
 
 /* YES click */
