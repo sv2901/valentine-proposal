@@ -7,6 +7,8 @@ const buttons = document.getElementById("buttons");
 const yesBtn = document.getElementById("yes");
 const noBtn = document.getElementById("no");
 const finalText = document.getElementById("final");
+const title = document.getElementById("title");
+
 
 let index = 0;
 
@@ -35,11 +37,20 @@ noBtn.addEventListener("mouseover", () => {
 
 // YES button action
 yesBtn.addEventListener("click", () => {
+  // hide everything else
+  title.classList.add("hidden");
+  typingElement.classList.add("hidden");
   question.classList.add("hidden");
   buttons.classList.add("hidden");
+
+  // show only final message
+  finalText.textContent =
+    "You just made me the happiest person 💍❤️";
+
   finalText.classList.remove("hidden");
   startHearts();
 });
+
 
 // Hearts animation
 function startHearts() {
