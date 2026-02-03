@@ -1,3 +1,4 @@
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,60 +6,7 @@
   font-family: "Poppins", system-ui, sans-serif;
 }
 
-/* INTRO STYLING */
-#intro h1 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-}
-
-#typing {
-  font-size: 1.05rem;
-  color: #555;
-  margin-bottom: 30px;
-}
-
-#intro h2 {
-  font-size: 1.4rem;
-  margin-bottom: 25px;
-}
-
-#no {
-  background: #ddd;
-  transition: transform 0.2s ease;  /* 🔥 smooth movement */
-}
-#no {
-  background: #ddd;
-  position: relative;
-  transition: transform 0.15s ease-out;
-}
-
-.title {
-  font-size: 2.4rem;
-  margin-bottom: 12px;
-}
-
-.intro-text {
-  font-size: 1.05rem;
-  color: #555;
-  margin: 10px 0 30px;
-  min-height: 24px; /* prevents jump during typing */
-}
-
-.question {
-  font-size: 1.4rem;
-  margin-bottom: 25px;
-}
-
-#yes {
-  background: #ff4d6d;
-  color: white;
-  box-shadow: 0 6px 15px rgba(255, 77, 109, 0.4);
-}
-
-#yes:hover {
-  transform: scale(1.05);
-}
-
+/* PAGE */
 body {
   height: 100vh;
   background: linear-gradient(135deg, #ffafbd, #ffc3a0);
@@ -67,6 +15,7 @@ body {
   align-items: center;
 }
 
+/* CARD */
 .container {
   background: white;
   padding: 50px;
@@ -74,17 +23,36 @@ body {
   width: 90%;
   max-width: 520px;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* UTIL */
 .hidden {
   display: none;
 }
 
+/* INTRO */
+#intro h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+#typing {
+  font-size: 1.05rem;
+  color: #555;
+  margin: 10px 0 30px;
+  min-height: 24px; /* prevents jump during typing */
+}
+
+#intro h2 {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+/* BUTTONS */
 .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  position: relative;
+  height: 60px;
   margin-top: 20px;
 }
 
@@ -96,13 +64,24 @@ button {
   cursor: pointer;
 }
 
+/* YES BUTTON */
 #yes {
   background: #ff4d6d;
   color: white;
+  box-shadow: 0 6px 15px rgba(255, 77, 109, 0.4);
+  transition: transform 0.2s ease;
 }
 
+#yes:hover {
+  transform: scale(1.05);
+}
+
+/* NO BUTTON — CURSOR-PROOF */
 #no {
   background: #ddd;
+  position: absolute;
+  pointer-events: none;        /* 🔥 cursor can NEVER land */
+  transition: transform 0.15s ease-out;
 }
 
 /* FINAL SCREEN */
@@ -117,11 +96,13 @@ button {
   justify-content: center;
 }
 
+/* FINAL TEXT */
 #final-text {
-  width: 100%;                 /* 🔥 FIX */
+  width: 100%;
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.6;
   white-space: pre-line;
-  color: #000;                 /* 🔥 FORCE visibility */
+  color: #000;
+  text-align: center;
 }
