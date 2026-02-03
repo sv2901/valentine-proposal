@@ -1,4 +1,3 @@
-/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +5,6 @@
   font-family: "Poppins", system-ui, sans-serif;
 }
 
-/* PAGE */
 body {
   height: 100vh;
   background: linear-gradient(135deg, #ffafbd, #ffc3a0);
@@ -15,20 +13,14 @@ body {
   align-items: center;
 }
 
-/* CARD */
 .container {
   background: white;
   padding: 50px;
-  border-radius: 20px;
+  border-radius: 22px;
   width: 90%;
   max-width: 520px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-/* UTIL */
-.hidden {
-  display: none;
 }
 
 /* INTRO */
@@ -40,8 +32,8 @@ body {
 #typing {
   font-size: 1.05rem;
   color: #555;
-  margin: 10px 0 30px;
-  min-height: 24px; /* prevents jump during typing */
+  margin: 12px 0 30px;
+  min-height: 24px;
 }
 
 #intro h2 {
@@ -51,9 +43,12 @@ body {
 
 /* BUTTONS */
 .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
   position: relative;
   height: 60px;
-  margin-top: 20px;
 }
 
 button {
@@ -64,48 +59,45 @@ button {
   cursor: pointer;
 }
 
-/* YES BUTTON */
 #yes {
   background: #ff4d6d;
   color: white;
   box-shadow: 0 6px 15px rgba(255, 77, 109, 0.4);
-  transition: transform 0.2s ease;
+  z-index: 2;
 }
 
 #yes:hover {
   transform: scale(1.05);
 }
 
-/* NO BUTTON — CURSOR-PROOF */
-/* NO BUTTON — smart escape */
 #no {
   background: #ddd;
-  position: absolute;
-  left: 55%;
-  top: 0;
-  transition: transform 0.15s ease-out;
+  z-index: 1;
+  transition: transform 0.12s ease-out;
 }
-
 
 /* FINAL SCREEN */
-#final {
-  min-height: 250px;
-  width: 100%;
+.hidden {
+  display: none;
 }
 
-#final.show {
-  display: flex;
+#final {
+  min-height: 260px;
+  width: 100%;
+  display: none;
   align-items: center;
   justify-content: center;
 }
 
-/* FINAL TEXT */
+#final.show {
+  display: flex;
+}
+
 #final-text {
   width: 100%;
   font-size: 1.6rem;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.7;
   white-space: pre-line;
   color: #000;
-  text-align: center;
 }
