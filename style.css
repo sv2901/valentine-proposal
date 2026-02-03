@@ -57,11 +57,14 @@ button {
   align-items: center;
   justify-content: center;
   min-height: 250px;
+  width: 100%;
 }
 
 #final-text {
+  width: 100%;                 /* 🔥 FIX */
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.6;
-  white-space: pre-line; /* THIS enables line breaks */
+  white-space: pre-line;
+  color: #000;                 /* 🔥 FORCE visibility */
 }
