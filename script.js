@@ -31,14 +31,17 @@ document.addEventListener("mousemove", (e) => {
 
   const dx = e.clientX - (rect.left + rect.width / 2);
   const dy = e.clientY - (rect.top + rect.height / 2);
+
   const distance = Math.sqrt(dx * dx + dy * dy);
 
   if (distance < 120) {
-    const x = Math.random() * 200 - 100;
-    const y = Math.random() * 40 - 20;
-    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    const moveX = Math.random() * 120 - 60;
+    const moveY = Math.random() * 80 - 40;
+
+    noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
   }
 });
+
 
 
 
