@@ -1,58 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", system-ui, sans-serif;
-}
-
 body {
   height: 100vh;
   background: linear-gradient(135deg, #ffafbd, #ffc3a0);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  font-family: "Poppins", system-ui, sans-serif;
 }
 
 .container {
   background: white;
-  padding: 50px 60px;
-  border-radius: 16px;
-  text-align: center;
-  max-width: 500px;
+  padding: 50px;
+  border-radius: 20px;
   width: 90%;
+  max-width: 500px;
+  text-align: center;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 1.2rem;
-  min-height: 60px;
-  margin-bottom: 25px;
-}
-
-h2 {
-  font-size: 1.8rem;
-  margin: 20px 0;
+.hidden {
+  display: none;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-top: 20px;
 }
 
 button {
-  padding: 12px 28px;
+  padding: 12px 26px;
   font-size: 1.1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 #yes {
@@ -60,33 +41,62 @@ button {
   color: white;
 }
 
-#yes:hover {
-  transform: scale(1.1);
-}
-
 #no {
   background: #ddd;
 }
 
-.hidden {
-  display: none;
+/* FINAL SCREEN */
+#final-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Floating hearts */
-.heart {
-  position: fixed;
-  bottom: -20px;
-  font-size: 20px;
-  animation: floatUp 6s linear infinite;
+/* Ring box */
+.ring-box {
+  width: 120px;
+  height: 80px;
+  background: #c2185b;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
 }
 
-@keyframes floatUp {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
+.lid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #e91e63;
+  top: 0;
+  left: 0;
+  transform-origin: top;
+  animation: openLid 1s ease forwards;
+}
+
+.ring {
+  position: absolute;
+  font-size: 36px;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: popRing 1s ease 1s forwards;
+}
+
+@keyframes openLid {
+  to {
+    transform: rotateX(110deg);
   }
-  100% {
-    transform: translateY(-110vh);
-    opacity: 0;
+}
+
+@keyframes popRing {
+  to {
+    bottom: 20px;
   }
+}
+
+#final-text {
+  font-size: 1.8rem;
+  font-weight: 600;
 }
